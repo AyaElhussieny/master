@@ -1,0 +1,17 @@
+img {
+    height: 400px;
+    width: 100%;
+}
+.card{
+    height: 550px;
+}
+i{
+    color: yellow;
+}
+
+.spinner{
+    height: 100vh;
+}
+.error{
+    height: 100vh;
+}

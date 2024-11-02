@@ -1,0 +1,36 @@
+<div id="home">
+    <div *ngIf="allProduct" class="container py-5">
+        <h1 class="mb-5">All Products</h1>
+        <div class="row gy-4">
+            <div *ngFor="let Product of allProduct" class="col-md-3">
+
+                <div class="card overflow-hidden border-0 rounded-3 shadow">
+
+                    <img [src]="Product.image" alt="">
+                    <div class="body p-2">
+                        <h5>{{Product.title}}</h5>
+                        <p><span class="fw-bold text-danger">Price : </span>{{Product.price}}</p>
+                        <div class="d-flex justify-content-start align-items-center">
+                            <p class="mb-0 ">{{Product.rating.rate}}</p>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="isError" class="container error py-5 mt-5 h-100">
+        <div class="d-flex w-100 h-100 text-danger justify-content-center align-items-center">
+            <h1>There is a problem with the data</h1>
+        </div>
+
+    </div>
+
+        <div *ngIf="isLoading" class="spinner d-flex justify-content-center align-items-center">
+            <div class="spinner-border"></div>
+
+        </div>
+</div>
